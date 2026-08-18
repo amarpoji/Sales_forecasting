@@ -1,0 +1,21 @@
+# Base configuration for AI Sales Forecasting
+project_name: sales_inventory_optimizer
+
+# Dataset Manifest
+raw_files:
+  sales: sales_train_evaluation.csv
+  calendar: calendar.csv
+  prices: sell_prices.csv
+
+# Development Subset Selection
+development_subset:
+  store_ids:
+    - CA_1
+    - TX_1
+  product_count: 50
+  random_seed: 42
+  years_of_history: 2
+
+# Operational defaults
+forecast_horizon: 7
+log_level: INFO
